@@ -31,7 +31,7 @@ class Idea{
         let position = 0;
         
         for(let i = 0; i < comments.length; i++){
-            if(comments[i].localeCompare(oldComment.getName) === 0)
+            if(comments[i].localeCompare(oldComment) === 0)
                 position = i;
         }
         
