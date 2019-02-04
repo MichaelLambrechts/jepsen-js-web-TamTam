@@ -11,5 +11,7 @@ import "./style.scss";
 /*
   Put the JavaScript code you want below.
 */
-
-console.log("Hey look in your browser console. It works!");
+// Create a list of ideas
+let list = document.createElement("ul");
+list.setAttribute("id", "list");
+document.querySelector(".content").appendChild(list);

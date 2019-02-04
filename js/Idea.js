@@ -1,3 +1,5 @@
+'use strict';
+
 class Idea{
     //constructor for the Idea class @param name and description
     constructor(name, description){
@@ -40,4 +42,4 @@ class Idea{
 }
 
 //export the class so it can be used elsewhere
-module.exports = Idea;
+export default Idea;
