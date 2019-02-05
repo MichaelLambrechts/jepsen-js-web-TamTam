@@ -1,5 +1,3 @@
-'use strict';
-
 const showdown = require('showdown');
 const converter = new showdown.Converter();
 
@@ -15,7 +13,7 @@ for (let num = 0; num < localStorage.length; num++) {
     idlist.setAttribute("data-target", "#exampleModal");
     idlist.setAttribute("class", "display");
     document.querySelector("#idea" + num).appendChild(idlist);
-    idlist.innerHTML = JSON.parse(localStorage.getItem(num))["name"]
+    idlist.innerText = JSON.parse(localStorage.getItem(num))["name"]
 
     let edlist = document.createElement("li");
     edlist.setAttribute("id", "edit" + num);
@@ -105,7 +103,8 @@ function addIdea() {
     subInput.setAttribute("type", "submit");
     subInput.setAttribute("id", "save");
     document.querySelector(".modal-footer").appendChild(subInput);
-    document.querySelector("#save").innerText = "Créer le plan";
+    document.querySelector("#save").innerText = "Creer le plan";
+
 
     //submit form and send it to locale storage
     document.querySelector("#save").addEventListener("click", () => {
@@ -133,8 +132,8 @@ for (let n = 0; n < localStorage.length; n++) {
 function displayIdea(id) {
     clearModal();
     let comments = JSON.parse(localStorage.getItem(id))["comments"];
-    //Créer l'array pour les commentaires
-    if(comments == undefined)
+    //Create the array for the comments
+    if (comments == undefined)
         comments = [];
 
     let nameInput = document.createElement("p");
@@ -147,14 +146,14 @@ function displayIdea(id) {
     document.querySelector(".modal-body").appendChild(descInput);
     document.querySelector("#desc").innerHTML = JSON.parse(localStorage.getItem(id))["desc"]
 
-    //Liste des commentaires
+    //List of comments
     let commentlist = document.createElement("ul");
-    commentlist.setAttribute("id","commentList");
+    commentlist.setAttribute("id", "commentList");
     document.querySelector(".modal-body").appendChild(commentlist);
-    
-    for (let comment=0; comment <comments.length; comment++){
+
+    for (let comment = 0; comment < comments.length; comment++) {
         let commentcont = document.createElement("li");
-        commentcont.setAttribute("id","comment" +comment);
+        commentcont.setAttribute("id", "comment" + comment);
         document.querySelector("#commentList").appendChild(commentcont);
         commentcont.innerText = comments[comment];
     }
@@ -176,21 +175,21 @@ function displayIdea(id) {
     document.querySelector(".modal-footer").appendChild(subInput);
     document.querySelector("#save").innerText = "Envoyer le commentaire";
 
-    //Envoyer les commentaires vers la BDD
-    document.querySelector("#save").addEventListener("click",()=>{
+    //Send the comments to the database
+    document.querySelector("#save").addEventListener("click", () => {
         comments.push(document.querySelector("#comment").value);
         let name = JSON.parse(localStorage.getItem(id))["name"];
         let desc = JSON.parse(localStorage.getItem(id))["desc"];
         localStorage.setItem(id, JSON.stringify({
             name: name,
             desc: desc,
-            comments : comments
+            comments: comments
         })
-    )
+        )
     });
 }
 
-//
+// click display 
 document.querySelector(".display").addEventListener("click", () => {
     let id = document.querySelector(".display").getAttribute('name');
     loadModal("display", id);
@@ -262,7 +261,7 @@ for (let r = 0; r < localStorage.length; r++) {
 //remove idea from localStorage
 function removeIdea(id) {
     id = parseInt(id);
-    // Déplace les éléments suivants vers le précedent
+    // Move the next elements to the previous one
     for (let n = id + 1; n < localStorage.length; n++) {
 
         let name = JSON.parse(localStorage.getItem(n))["name"];
@@ -311,6 +310,6 @@ function convertToMd(toConvert) {
 }
 
 //refresh the page
-async function refresh(){
+async function refresh() {
     await location.reload(true);
 }
