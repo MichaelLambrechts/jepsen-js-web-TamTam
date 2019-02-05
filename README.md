@@ -53,12 +53,12 @@ As long as your project as been properly configured to enable Github Pages on th
 
 * [index.html](./index.html): The HTML file. Don't forget to modify the title of the exercise !
 * [style.scss](./style.scss): A [SCSS](https://sass-lang.com/) file that will automatically be compiled to CSS to be loaded by the HTML file. Useful if you want to add some custom CSS.
-* [function.js](./js/function.js)[script.js](./script.js): JavaScript files that is loaded by the HTML file. Modify this at your convenience if you want to change some functionality of the application.
+* [function.js](./js/function.js) [script.js](./script.js): JavaScript files that is loaded by the HTML file. Modify this at your convenience if you want to change some functionality of the application.
 
 ## Integrated libraries
 
 This template already integrate some libraries and tools:
 
 * [Bootstrap](https://getbootstrap.com/): A CSS framework containing a lot of useful components, both in CSS and JavaScript. This template uses the [Litera](https://bootswatch.com/litera/) Bootstrap template.
-* [Font Awesome](https://fontawesome.com/): A library of icons that we can use to display nice little icons everywhere. There are even dogs in it :smiley_dog: !
+* [Font Awesome](https://fontawesome.com/): A library of icons that we can use to display nice little icons everywhere. There are even cats in it :smiley_cat: !
 * [Showdown](https://github.com/showdownjs/showdown): A converter for HTML to Markdown, and Mardown to HTML.
