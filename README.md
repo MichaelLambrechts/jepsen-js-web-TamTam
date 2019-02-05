@@ -1,5 +1,5 @@
 # jepsen-js-web-TamTam
-Super Vilain Application in Javascript, you can see it on [this web page](https://www.bovealexandre.github.io/jepsen-js-web-TamTam/).
+Super Vilain Application in Javascript, you can see it on [this web page](https://bovealexandre.github.io/jepsen-js-web-TamTam/).
 
 ## How to set up your project
 
