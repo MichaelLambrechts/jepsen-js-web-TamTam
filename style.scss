@@ -108,3 +108,72 @@ header{
   background: rgb(0,0,0);
 }
 
+ul>ul{
+  border: 1px solid red;
+  border-radius: 10px;
+  margin: 3px 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.display{
+  align-self: flex-start;
+  width: 90%;
+  word-wrap: break-word;
+}
+
+ul>ul>li{
+  padding: 10px;
+}
+
+p, .btn{
+  font-family: 'DIEDIEDI';
+}
+
+.btn, .btn:hover{
+  background-color: red;
+  border: 1px solid black;
+}
+
+.modal-body, h1{
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 576px) {
+  .display{
+    width: 60%;
+  }
+  ul>ul>li{
+    padding: 0;
+  }
+  #logo>img{
+    height: 188px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .display{
+    width: 70%;
+  }
+  ul>ul>li{
+    padding: 0;
+  }
+  #logo>img{
+    height: 188px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .display{
+    width: 80%;
+  }
+  ul>ul>li{
+    padding: 10px;
+  }
+  #logo>img{
+    height: 240px;
+  }
+}
+
+
